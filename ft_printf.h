@@ -14,9 +14,9 @@
 # define FT_PRINTF_H
 
 # include "libft.h"
-# include <stdarg.h>
-# include <stdint.h>
-# include <limits.h>
+# include <stdarg.h> // provides macros for working with variadic functions, such as va_start, va_arg, va_copy, and va_end
+# include <stdint.h> // allows to use fixed-width integer types like uint32_t, int64_t, or uintptr_t.
+# include <limits.h> // constants for INT_MAX, etc.
 
 int		ft_print_address(unsigned long x);
 int		ft_print_hex(char c, unsigned int x);
