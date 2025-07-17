@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = newlib.a
+NAME = libftprintf.a
 LIBFT_DIR = C_libft/
 LIBFT = libft.a
 SRCS_DIR = Sources/

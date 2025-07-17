@@ -47,3 +47,9 @@ make re
 make test
 make test2
 ```
+
+## Tester (see README.md)
+```
+cd printfTester
+make
+```
