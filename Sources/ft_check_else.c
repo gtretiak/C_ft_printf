@@ -17,12 +17,12 @@ int	ft_check_else(char c, va_list args)
 	int	count;
 
 	count = 0;
-	if (c == '%')
+	if (c == '%') // literal percent sign
 	{
 		ft_putchar_fd('%', 1);
 		return (1);
 	}
 	else if (c == 'p')
-		count += ft_take_address(va_arg(args, void *));
+		count += ft_take_address(va_arg(args, void *)); // retrieving an argument as a generic pointer
 	return (count);
 }
