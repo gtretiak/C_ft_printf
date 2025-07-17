@@ -40,7 +40,7 @@ $(NAME): $(OBJS) $(LIBFT_DIR)$(LIBFT)
 $(SRCS_DIR)%.o: $(SRCS_DIR)%.c $(HEAD)
 	cc $(CFLAGS) -I. -I$(LIBFT_DIR) -c $< -o $@
 
-.PHONY: clean fclean re test
+.PHONY: clean fclean re test test2
 
 clean:
 	rm -f $(OBJS)
@@ -49,6 +49,7 @@ clean:
 fclean: clean
 	@if [ -f $(NAME) ]; then rm -f $(NAME); fi
 	@if [ -f test ]; then rm -f test; fi
+	@if [ -f test2 ]; then rm -f test2; fi
 	@if [ -d $(LIBFT_DIR) ]; then make fclean -C $(LIBFT_DIR); fi
 	@if [ -d $(LIBFT_DIR) ]; then rm -rf $(LIBFT_DIR); fi
 
@@ -57,3 +58,8 @@ re: fclean all
 test: $(LIBFT) $(NAME)
 	@if [ -f $(NAME) ]; then cc $(CFLAGS) test_main.c $(NAME) $(LIBFT_DIR)$(LIBFT) -I$(LIBFT_DIR) -o test; fi
 	@echo "test is compiled!";
+
+test2: $(LIBFT) $(NAME)
+	@if [ -f $(NAME) ]; then cc $(CFLAGS) test_main2.c $(NAME) $(LIBFT_DIR)$(LIBFT) -I$(LIBFT_DIR) -o test2; fi
+	@echo "test2 is compiled!";
+

@@ -45,4 +45,5 @@ make clean
 make fclean
 make re
 make test
+make test2
 ```
