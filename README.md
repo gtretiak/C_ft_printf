@@ -6,8 +6,9 @@
 
 ## 📚 Project Overview
 
-The `ft_printf` project is part of the 42 school curriculum and challenges you to recreate one of the most fundamental and versatile functions in C: `printf()`. It’s a moderately difficult exercise that will significantly improve your skills in:
+The `ft_printf` project is part of the 42 school curriculum. It´s recreation one of the most fundamental and versatile functions in C: `printf()`.
 
+## Concepts:
 - Memory management
 - Variadic functions
 - String and character handling
