@@ -21,7 +21,7 @@ int	ft_check_chars(char c, va_list args)
 	count = 0;
 	if (c == 's')
 	{
-		s = va_arg(args, char *);
+		s = va_arg(args, char *); // retrieving argument as a string
 		if (s)
 		{
 			ft_putstr_fd(s, 1);
@@ -32,7 +32,7 @@ int	ft_check_chars(char c, va_list args)
 	}
 	else if (c == 'c')
 	{
-		c = (char)va_arg(args, int);
+		c = (char)va_arg(args, int); // retrieving argument as an int (standard promotion for char in variadic functions)
 		ft_putchar_fd(c, 1);
 		return (1);
 	}
