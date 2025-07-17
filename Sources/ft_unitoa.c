@@ -25,7 +25,7 @@ static int	ft_countn(unsigned int nb)
 		nb /= 10;
 		i++;
 	}
-	return (i);
+	return (i); // returns the number of digits in nb
 }
 
 char	*ft_unitoa(unsigned int n)
@@ -38,13 +38,13 @@ char	*ft_unitoa(unsigned int n)
 	if (!s)
 		return (NULL);
 	s[l] = '\0';
-	if (n == 0)
+	if (n == 0) // edge case
 	{
 		s[0] = '0';
 		return (s);
 	}
-	while (n)
-	{
+	while (n) // starting from the last char in the string to return (except the null-terminator)
+	{ // we put into it the last digit, converted to a character
 		s[--l] = n % 10 + '0';
 		n /= 10;
 	}
