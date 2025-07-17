@@ -20,11 +20,11 @@ int	ft_print_hex(char c, unsigned int x)
 
 	count = 0;
 	base = "0123456789ABCDEF";
-	if (c == 'x')
+	if (c == 'x') // we determine correct case
 		base = "0123456789abcdef";
-	if (x < 16)
+	if (x < 16) // if it´s single-digit hex value, we just print it
 		return (write(1, &base[x], 1));
-	else
+	else // otherwise we dive into recursive call
 	{
 		while (x >= 16)
 		{
