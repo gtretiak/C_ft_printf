@@ -21,20 +21,20 @@ int	ft_check_numbers(char c, va_list args)
 	count = 0;
 	if (c == 'i' || c == 'd')
 	{
-		s = ft_itoa(va_arg(args, int));
+		s = ft_itoa(va_arg(args, int)); // retrieving argument as an int and converting to a string
 		ft_putstr_fd(s, 1);
 		count += ft_strlen(s);
 		free(s);
 	}
 	else if (c == 'u')
 	{
-		s = ft_unitoa(va_arg(args, unsigned int));
+		s = ft_unitoa(va_arg(args, unsigned int)); // retrieving argument as an unsigned int and converting to a string
 		ft_putstr_fd(s, 1);
 		count += ft_strlen(s);
 		free(s);
 	}
 	else if (c == 'x' || c == 'X')
-		count += ft_print_hex(c, va_arg(args, unsigned int));
+		count += ft_print_hex(c, va_arg(args, unsigned int)); // retrieving argument as an unsigned int
 	else
 		count += ft_check_else(c, args);
 	return (count);
